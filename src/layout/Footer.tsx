@@ -33,13 +33,18 @@ export const Footer: VFC = () => {
         <div className="grid gap-y-8 md:grid-cols-3 md:gap-0">
           <div>
             {router.pathname === "/" ? (
-              <Scroll to="home" smooth duration={600} className="flex gap-x-2 items-end text-2xl lg:text-4xl">
+              <Scroll
+                to="home"
+                smooth
+                duration={600}
+                className="flex gap-x-2 items-end text-2xl cursor-pointer lg:text-4xl"
+              >
                 <AiOutlineLaptop className="text-2xl lg:text-4xl" />
                 Shinji Takahashi
               </Scroll>
             ) : (
               <Link href="/">
-                <a className="flex gap-x-2 items-end text-2xl lg:text-4xl">
+                <a className="flex gap-x-2 items-end text-2xl cursor-pointer lg:text-4xl">
                   <AiOutlineLaptop className="text-2xl lg:text-4xl" />
                   Shinji Takahashi
                 </a>
@@ -87,7 +92,7 @@ export const Footer: VFC = () => {
               <ul className="space-y-2">
                 <li>
                   <Link href="/">
-                    <a className="group inline-flex items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
+                    <a className="group inline-flex gap-x-2 items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
                       <AiOutlineArrowRight className="text-3xl group-hover:translate-x-1" />
                       <span>Home</span>
                     </a>
@@ -97,7 +102,7 @@ export const Footer: VFC = () => {
                 {secondLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={`/#${link.href}`}>
-                      <a className="group inline-flex items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
+                      <a className="group inline-flex gap-x-2 items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
                         <AiOutlineArrowRight className="text-3xl group-hover:translate-x-1" />
                         <span>{link.label}</span>
                       </a>
