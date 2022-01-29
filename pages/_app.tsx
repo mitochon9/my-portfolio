@@ -1,15 +1,22 @@
-import "../src/styles/index.css";
+import "src/styles/index.css";
 
+import gsap from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import type { AppProps, CustomAppPage } from "next/app";
 import Head from "next/head";
 import { memo } from "react";
+import { RecoilRoot } from "recoil";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App: CustomAppPage = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>mitochon next tailwind</title>
     </Head>
-    <Component {...pageProps} />
+    <RecoilRoot>
+      <Component {...pageProps} />
+    </RecoilRoot>
   </>
 );
 

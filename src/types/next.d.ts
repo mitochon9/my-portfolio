@@ -10,6 +10,7 @@ declare module "next" {
 
 declare module "next/app" {
   type CustomAppPage<P = Record<string, unknown>> = (
-    props: AppProps<P> & { component: NextPage & PageAttributes }
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    props: AppProps<P> & { Component: NextPage & PageAttributes }
   ) => JSX.Element;
 }
