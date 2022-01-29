@@ -11,5 +11,16 @@
   "files.eol": "\n",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["automerge", "mitochon", "tailwindcss"]
+  "cSpell.words": [
+    "automerge",
+    "gsap",
+    "heroicons",
+    "microcms",
+    "mitochon",
+    "Nextdotjs",
+    "sendgrid",
+    "Shinji",
+    "tailwindcss",
+    "Takahashi"
+  ]
 }
