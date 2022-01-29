@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 import type { LegacyRef, VFC } from "react";
 import { useEffect, useRef } from "react";
 import {
-  AiFillFacebook,
-  AiFillInstagram,
+  AiFillGithub,
   AiFillMail,
   AiFillTwitterSquare,
   AiOutlineEdit,
@@ -19,26 +18,31 @@ import { useRecoilState } from "recoil";
 import { headerHeightState } from "src/component/state/headerHeightAtom";
 
 export const firstLinks = [
-  {
-    href: "https://www.facebook.com/shinji.takahashiii",
-    label: "Facebook",
-    icon: (
-      <AiFillFacebook className="text-3xl group-hover:text-gray-100 group-hover:bg-[#1877f2] hover:bg-[#1877f2] rounded" />
-    ),
-  },
-  {
-    href: "https://www.instagram.com/ikiiki.shinji",
-    label: "Instagram",
-    icon: (
-      <AiFillInstagram className="text-3xl group-hover:text-gray-100 group-hover:bg-[#e1306c] hover:bg-[#e1306c] rounded" />
-    ),
-  },
+  // {
+  //   href: "https://www.facebook.com/shinji.takahashiii",
+  //   label: "Facebook",
+  //   icon: (
+  //     <AiFillFacebook className="text-3xl group-hover:text-gray-100 group-hover:bg-[#1877f2] hover:bg-[#1877f2] rounded" />
+  //   ),
+  // },
+  // {
+  //   href: "https://www.instagram.com/ikiiki.shinji",
+  //   label: "Instagram",
+  //   icon: (
+  //     <AiFillInstagram className="text-3xl group-hover:text-gray-100 group-hover:bg-[#e1306c] hover:bg-[#e1306c] rounded" />
+  //   ),
+  // },
   {
     href: "https://twitter.com/mitochon_9",
     label: "Twitter",
     icon: (
       <AiFillTwitterSquare className="text-3xl group-hover:text-gray-100 group-hover:bg-[#1da1f2] hover:bg-[#1da1f2] rounded" />
     ),
+  },
+  {
+    href: "https://github.com/mitochon9",
+    label: "GitHub",
+    icon: <AiFillGithub className="text-3xl group-hover:text-gray-100 group-hover:bg-[#333] hover:bg-[#333] rounded" />,
   },
   {
     href: "/contact",
