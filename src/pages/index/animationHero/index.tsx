@@ -10,6 +10,13 @@ export const AnimationHero: VFC = () => {
   const listContainer: LegacyRef<HTMLDivElement> | undefined = useRef(null);
 
   const listWrapper: LegacyRef<HTMLDivElement> | undefined = useRef(null);
+  const [listWrapperWidth, setListWrapperWidth] = useState(0);
+  useEffect(() => {
+    if (listWrapper.current) {
+      const clientWidth = listWrapper?.current.clientWidth;
+      setListWrapperWidth(clientWidth);
+    }
+  }, []);
 
   const list: LegacyRef<HTMLUListElement> | undefined = useRef(null);
   const [listWidth, setListWidth] = useState(0);
@@ -21,50 +28,41 @@ export const AnimationHero: VFC = () => {
   }, []);
 
   useEffect(() => {
-    const listTl = gsap.timeline({
+    gsap.to(list.current, {
+      x: () => -(listWidth - listWrapperWidth),
+      ease: "none",
       scrollTrigger: {
         trigger: listContainer.current,
         start: "top top",
-        pin: true,
-        end: `+=${innerHeight}`,
+        end: () => `+=${listWidth - listWrapperWidth}`,
         scrub: 0.5,
+        pin: true,
         pinSpacing: false,
-        // anticipatePin: 1,
-        // invalidateOnRefresh: true,
       },
     });
-
-    listTl.to(list.current, {
-      delay: 0.1,
-      x: -listWidth + innerWidth - 120,
-      ease: "none",
-    });
-
-    // ScrollTrigger.refresh();
-    // listTl.scrollTrigger.kill();
-  }, [listWidth]);
+  }, [listWidth, listWrapperWidth]);
 
   return (
     <div className="pb-48 -mx-2 bg-white border border-white lg:mt-[86px] xl:mx-0">
       <FirstView />
 
-      <div ref={listContainer} className="flex items-center min-h-[100vh]">
-        <div ref={listWrapper} className="overflow-hidden px-12 max-w-full">
-          <ul ref={list} className="inline-flex">
-            <li>
-              <SiHtml5 className="w-screen text-[160px] text-[#e34f26] md:text-[200px] lg:text-[240px]" />
+      <div ref={listContainer} className="flex justify-center items-center">
+        <div ref={listWrapper} className="flex overflow-hidden relative w-full h-[400vw]">
+          <ul ref={list} className="flex absolute top-0 left-0">
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#e34f26]">
+              <SiHtml5 />
             </li>
-            <li>
-              <SiCss3 className="w-screen text-[160px] text-[#2965f1] md:text-[200px] lg:text-[240px]" />
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#2965f1]">
+              <SiCss3 />
             </li>
-            <li>
-              <SiTypescript className="w-screen text-[160px] text-[#3178c6] md:text-[200px] lg:text-[240px]" />
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#3178c6]">
+              <SiTypescript />
             </li>
-            <li>
-              <SiReact className="w-screen text-[160px] text-[#00d8ff] md:text-[200px] lg:text-[240px]" />
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#00d8ff]">
+              <SiReact />
             </li>
-            <li>
-              <SiNextdotjs className="w-screen text-[160px] md:text-[200px] lg:text-[240px]" />
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px]">
+              <SiNextdotjs />
             </li>
           </ul>
         </div>
