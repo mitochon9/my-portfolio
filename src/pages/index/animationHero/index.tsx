@@ -1,6 +1,5 @@
 // import gsap from "gsap";
 import gsap from "gsap/dist/gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import type { LegacyRef, VFC } from "react";
 import { useEffect, useRef, useState } from "react";
 import { SiCss3, SiHtml5, SiNextdotjs, SiReact, SiTypescript } from "react-icons/si";
@@ -41,7 +40,7 @@ export const AnimationHero: VFC = () => {
       ease: "none",
     });
 
-    ScrollTrigger.refresh();
+    // ScrollTrigger.refresh();
     // listTl.scrollTrigger.kill();
   }, [listWidth]);
 
