@@ -69,7 +69,7 @@ export const Blog: VFC = () => {
         ))}
       </ul>
 
-      <div className="mt-12 text-center">
+      <div className="mx-auto mt-12 max-w-xs text-center">
         <LinkButton href="/blog" className="primary-button">
           ブログ記事一覧はこちら
         </LinkButton>

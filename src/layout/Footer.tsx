@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import type { VFC } from "react";
-import { AiOutlineArrowRight, AiOutlineArrowUp, AiOutlineLaptop, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineArrowUp, AiOutlineLaptop, AiOutlineMail } from "react-icons/ai";
+import { FaChevronRight } from "react-icons/fa";
 import { Link as Scroll } from "react-scroll";
 import { useRecoilValue } from "recoil";
 import { headerHeightState } from "src/component/state/headerHeightAtom";
@@ -29,7 +30,7 @@ export const Footer: VFC = () => {
         </Scroll>
       </div>
 
-      <div className="container py-24 px-4 mx-auto mt-8 text-gray-800 bg-gray-200 md:px-8 md:my-8 md:rounded-lg">
+      <div className="container py-12 px-4 mx-auto mt-8 text-gray-800 bg-gray-200 md:px-8 md:my-8 md:rounded-lg lg:py-24">
         <div className="grid gap-y-8 md:grid-cols-3 md:gap-0">
           <div>
             {router.pathname === "/" ? (
@@ -59,18 +60,6 @@ export const Footer: VFC = () => {
           {router.pathname === "/" ? (
             <nav className="flex flex-col">
               <ul>
-                <li>
-                  <Scroll
-                    to="home"
-                    smooth
-                    duration={600}
-                    className="group inline-flex gap-x-2 items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
-                  >
-                    <AiOutlineArrowRight className="text-3xl group-hover:translate-x-1" />
-                    <span>Home</span>
-                  </Scroll>
-                </li>
-
                 {secondLinks.map((link) => (
                   <li key={link.href}>
                     <Scroll
@@ -78,9 +67,9 @@ export const Footer: VFC = () => {
                       smooth
                       duration={600}
                       offset={-headerHeight - 20}
-                      className="group inline-flex gap-x-2 items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
+                      className="group flex gap-x-2 items-center py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
                     >
-                      <AiOutlineArrowRight className="text-3xl group-hover:translate-x-1" />
+                      <FaChevronRight className="text-xl group-hover:translate-x-1" />
                       <span>{link.label}</span>
                     </Scroll>
                   </li>
@@ -90,20 +79,11 @@ export const Footer: VFC = () => {
           ) : (
             <nav>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/">
-                    <a className="group inline-flex gap-x-2 items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
-                      <AiOutlineArrowRight className="text-3xl group-hover:translate-x-1" />
-                      <span>Home</span>
-                    </a>
-                  </Link>
-                </li>
-
                 {secondLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={`/#${link.href}`}>
-                      <a className="group inline-flex gap-x-2 items-end py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
-                        <AiOutlineArrowRight className="text-3xl group-hover:translate-x-1" />
+                      <a className="group flex gap-x-2 items-center py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
+                        <FaChevronRight className="text-xl group-hover:translate-x-1" />
                         <span>{link.label}</span>
                       </a>
                     </Link>
@@ -119,7 +99,7 @@ export const Footer: VFC = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="group inline-flex gap-x-2 items-end py-2 pr-6 pl-4 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
+                    className="group flex gap-x-2 items-center py-2 pr-6 pl-2 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
                   >
                     <span>{link.icon}</span>
                     <span>{link.label}</span>

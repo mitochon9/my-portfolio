@@ -10,7 +10,6 @@ import {
   AiOutlineHome,
   AiOutlineInfoCircle,
   AiOutlineLaptop,
-  AiOutlineMenu,
 } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import { Link as Scroll } from "react-scroll";
@@ -53,6 +52,11 @@ export const firstLinks = [
 
 export const secondLinks = [
   {
+    href: "home",
+    label: "Home",
+    icon: <AiOutlineHome className="text-3xl" />,
+  },
+  {
     href: "about",
     label: "About",
     icon: <AiOutlineInfoCircle className="text-3xl" />,
@@ -68,6 +72,16 @@ export const secondLinks = [
     icon: <AiOutlineEdit className="text-3xl" />,
   },
 ];
+
+export const Logo = () => (
+  <div className="flex gap-x-1 justify-center items-center italic text-gray-600 cursor-pointer md:items-end">
+    <AiOutlineLaptop className="text-4xl md:text-3xl" />
+    <div className="flex font-bold text-right scale-y-110 md:gap-x-1 md:text-2xl lg:text-3xl">
+      <span>Shinji Takahashi&apos;s</span>
+      <span className="ml-1 text-green-500">PORTFOLIO</span>
+    </div>
+  </div>
+);
 
 /**
  * @package
@@ -87,7 +101,7 @@ export const Header: VFC = () => {
   }, [ref, setHeaderHeight]);
 
   return (
-    <div ref={ref} className="fixed top-0 z-10 w-full">
+    <div ref={ref} className="top-0 z-10 w-full lg:fixed">
       <div className="hidden justify-between items-center text-gray-100 bg-gray-600 lg:flex">
         <h2>Shinji Takahashi&apos;s portfolio</h2>
         <nav className="flex gap-x-4 justify-center items-center">
@@ -106,64 +120,33 @@ export const Header: VFC = () => {
         </nav>
       </div>
 
-      <div className="flex justify-between items-center px-2 h-[86px] bg-gray-50 shadow lg:h-auto">
-        <h1 className="space-x-1 text-gray-600">
+      <div className="flex justify-between items-center px-2 h-12 bg-gray-50 shadow lg:h-auto">
+        <h1>
           {router.pathname === "/" ? (
-            <Scroll
-              to="home"
-              smooth
-              duration={600}
-              className="flex gap-x-1 justify-center items-center italic cursor-pointer md:items-end"
-            >
-              <AiOutlineLaptop className="text-4xl md:text-3xl" />
-              <div className="flex flex-col font-bold text-right scale-y-110 md:flex-row md:gap-x-1 md:text-2xl lg:text-3xl">
-                <span>Shinji Takahashi&apos;s</span>
-                <span className="text-green-500"> PORTFOLIO</span>
-              </div>
+            <Scroll to="home" smooth duration={600}>
+              <Logo />
             </Scroll>
           ) : (
             <Link href="/">
               <a className="flex gap-x-1 justify-center items-center italic md:items-end">
-                <AiOutlineLaptop className="text-4xl md:text-3xl" />
-                <div className="flex flex-col font-bold text-right scale-y-110 md:flex-row md:gap-x-1 md:text-2xl lg:text-3xl">
-                  <span>Shinji Takahashi&apos;s</span>
-                  <span className="text-green-500"> PORTFOLIO</span>
-                </div>
+                <Logo />
               </a>
             </Link>
           )}
         </h1>
 
         <nav className="hidden justify-center items-center text-gray-700 lg:flex">
-          {router.pathname === "/" ? (
-            <Scroll
-              to="home"
-              smooth
-              duration={600}
-              className="flex items-end py-2 px-4 text-2xl hover:bg-gray-200 cursor-pointer"
-            >
-              <AiOutlineHome className="text-3xl" />
-              <span>Home</span>
-            </Scroll>
-          ) : (
-            <Link href="/">
-              <a className="flex items-end py-2 px-4 text-2xl hover:bg-gray-200">
-                <AiOutlineHome className="text-3xl" />
-                <span>Home</span>
-              </a>
-            </Link>
-          )}
-
           {secondLinks.map((link) =>
             router.pathname === "/" ? (
               <Scroll
+                key={link.href}
                 to={link.href}
                 smooth
                 duration={600}
                 offset={-headerHeight - 20}
                 className="flex items-end py-2 px-4 text-2xl hover:bg-gray-200 cursor-pointer"
               >
-                <AiOutlineHome className="text-3xl" />
+                {link.icon}
                 <span>{link.label}</span>
               </Scroll>
             ) : (
@@ -175,10 +158,6 @@ export const Header: VFC = () => {
               </Link>
             )
           )}
-        </nav>
-
-        <nav className="md:hidden">
-          <AiOutlineMenu />
         </nav>
       </div>
     </div>
