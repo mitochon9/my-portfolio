@@ -35,9 +35,10 @@ export const AnimationHero: VFC = () => {
         trigger: listContainer.current,
         start: "top top",
         end: () => `+=${listWidth - listWrapperWidth}`,
-        scrub: 0.5,
+        scrub: true,
         pin: true,
         pinSpacing: false,
+        // markers: true,
       },
     });
   }, [listWidth, listWrapperWidth]);
@@ -47,21 +48,21 @@ export const AnimationHero: VFC = () => {
       <FirstView />
 
       <div ref={listContainer} className="flex justify-center items-center">
-        <div ref={listWrapper} className="flex overflow-hidden relative w-full h-[400vw]">
-          <ul ref={list} className="flex absolute top-0 left-0">
-            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#e34f26]">
+        <div ref={listWrapper} className="flex overflow-hidden relative h-[450vw] md:h-[300vw]">
+          <ul ref={list} className="flex sm:ml-48">
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#e34f26] md:w-[60vw]">
               <SiHtml5 />
             </li>
-            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#2965f1]">
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#2965f1] md:w-[60vw]">
               <SiCss3 />
             </li>
-            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#3178c6]">
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#3178c6] md:w-[60vw]">
               <SiTypescript />
             </li>
-            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#00d8ff]">
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] text-[#00d8ff] md:w-[60vw]">
               <SiReact />
             </li>
-            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px]">
+            <li className="flex justify-center items-center w-[90vw] h-[100vh] text-[300px] md:w-[60vw]">
               <SiNextdotjs />
             </li>
           </ul>

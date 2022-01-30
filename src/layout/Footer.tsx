@@ -67,7 +67,7 @@ export const Footer: VFC = () => {
                       smooth
                       duration={600}
                       offset={-headerHeight - 20}
-                      className="group flex gap-x-2 items-center py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
+                      className="group flex gap-x-2 items-center py-2 pr-6 text-2xl hover:bg-gray-300 rounded cursor-pointer"
                     >
                       <FaChevronRight className="text-xl group-hover:translate-x-1" />
                       <span>{link.label}</span>
@@ -82,7 +82,7 @@ export const Footer: VFC = () => {
                 {secondLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={`/#${link.href}`}>
-                      <a className="group flex gap-x-2 items-center py-2 pr-6 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer">
+                      <a className="group flex gap-x-2 items-center py-2 pr-6 text-2xl hover:bg-gray-300 rounded cursor-pointer">
                         <FaChevronRight className="text-xl group-hover:translate-x-1" />
                         <span>{link.label}</span>
                       </a>
@@ -99,7 +99,7 @@ export const Footer: VFC = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="group flex gap-x-2 items-center py-2 pr-6 pl-2 text-2xl hover:bg-gray-300 rounded hover:cursor-pointer"
+                    className="group flex gap-x-2 items-center py-2 pr-6 pl-2 text-2xl hover:bg-gray-300 rounded cursor-pointer"
                   >
                     <span>{link.icon}</span>
                     <span>{link.label}</span>
