@@ -48,6 +48,7 @@ export const DrawerMenu = () => {
             <div className="flex justify-start h-12">
               <Logo />
             </div>
+
             {router.pathname === "/" ? (
               <nav>
                 <ul className="text-gray-700 last:border-b last:border-gray-300">

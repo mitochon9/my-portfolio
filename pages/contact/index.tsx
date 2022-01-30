@@ -4,7 +4,7 @@ import { Contact } from "src/pages/contact";
 
 const ContactPage: CustomNextPage = () => (
   <FluidLayout>
-    <Contact />;
+    <Contact />
   </FluidLayout>
 );
 

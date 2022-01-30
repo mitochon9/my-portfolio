@@ -22,7 +22,9 @@ export const FluidLayout: CustomLayout = ({ children }: Props) => {
         <Header />
       </header>
 
-      <main className={`flex-1 px-2 pb-16 bg-gray-600 ${router.pathname !== "/" ? "pt-[calc(64px+86px)]" : ""}`}>
+      <main
+        className={`flex-1 px-2 pb-16 bg-gray-600 ${router.pathname === "/" ? "" : "pt-16 lg:pt-[calc(64px+86px)]"}`}
+      >
         <div className="container mx-auto">
           <LayoutErrorBoundary>{children}</LayoutErrorBoundary>
         </div>

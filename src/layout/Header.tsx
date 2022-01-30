@@ -74,7 +74,7 @@ export const secondLinks = [
 ];
 
 export const Logo = () => (
-  <div className="flex gap-x-1 justify-center items-center italic text-gray-600 cursor-pointer md:items-end">
+  <div className="flex gap-x-1 justify-center items-center italic text-gray-600 md:items-end">
     <AiOutlineLaptop className="text-4xl md:text-3xl" />
     <div className="flex font-bold text-right scale-y-110 md:gap-x-1 md:text-2xl lg:text-3xl">
       <span>Shinji Takahashi&apos;s</span>
@@ -123,12 +123,12 @@ export const Header: VFC = () => {
       <div className="flex justify-between items-center px-2 h-12 bg-gray-50 shadow lg:h-auto">
         <h1>
           {router.pathname === "/" ? (
-            <Scroll to="home" smooth duration={600}>
+            <Scroll to="home" smooth duration={600} className="cursor-pointer">
               <Logo />
             </Scroll>
           ) : (
             <Link href="/">
-              <a className="flex gap-x-1 justify-center items-center italic md:items-end">
+              <a className="flex gap-x-1 justify-center items-center italic cursor-pointer md:items-end">
                 <Logo />
               </a>
             </Link>

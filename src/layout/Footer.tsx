@@ -23,7 +23,7 @@ export const Footer: VFC = () => {
           to="home"
           smooth
           duration={600}
-          className="inline-block text-gray-600 duration-100 hover:animate-bounce hover:-translate-y-1 cursor-pointer"
+          className="inline-block text-gray-600 duration-100 hover:-translate-y-1 cursor-pointer"
         >
           <AiOutlineArrowUp className="mx-auto text-3xl" />
           <span className="block">PAGE TOP</span>
