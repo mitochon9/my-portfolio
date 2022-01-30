@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const App: CustomAppPage = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
-      <title>mitochon next tailwind</title>
+      <title>Shinji Takahashi&apos;s PORTFOLIO</title>
     </Head>
     <RecoilRoot>
       <Component {...pageProps} />
