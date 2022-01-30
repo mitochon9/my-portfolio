@@ -70,7 +70,9 @@ export const Blog: VFC = () => {
       </ul>
 
       <div className="mt-12 text-center">
-        <LinkButton href="/blog">ブログ記事一覧はこちら</LinkButton>
+        <LinkButton href="/blog" className="primary-button">
+          ブログ記事一覧はこちら
+        </LinkButton>
       </div>
     </div>
   );

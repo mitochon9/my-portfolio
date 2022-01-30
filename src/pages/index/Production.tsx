@@ -73,7 +73,9 @@ export const Production: VFC = () => {
               <div className="flex flex-col flex-1 justify-between">
                 <p className="mt-4">{production.comment}</p>
                 <div className="flex justify-end mt-4 md:mt-0">
-                  <LinkButton href={production.href}>{production.label}</LinkButton>
+                  <LinkButton href={production.href} className="primary-button">
+                    {production.label}
+                  </LinkButton>
                 </div>
               </div>
 
