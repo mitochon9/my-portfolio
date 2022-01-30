@@ -32,9 +32,9 @@ export const DrawerMenu = () => {
         className={`fixed right-0 top-0 z-50 w-12 h-12 rounded-full`}
       >
         {isDrawerOpen ? (
-          <AiOutlineClose className="p-2 w-12 h-12 text-gray-50 bg-gray-600" />
+          <AiOutlineClose className="p-2 w-12 h-12 text-gray-50 bg-gray-600 border border-gray-600" />
         ) : (
-          <AiOutlineMenu className="p-2 w-12 h-12 text-gray-50 bg-gray-600" />
+          <AiOutlineMenu className="p-2 w-12 h-12 text-gray-50 bg-gray-600 border border-gray-600" />
         )}
       </button>
 
@@ -48,6 +48,7 @@ export const DrawerMenu = () => {
             <div className="flex justify-start h-12">
               <Logo />
             </div>
+
             {router.pathname === "/" ? (
               <nav>
                 <ul className="text-gray-700 last:border-b last:border-gray-300">

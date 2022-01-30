@@ -23,7 +23,7 @@ export const Blog: VFC = () => {
         y: 0,
         autoAlpha: 1,
         duration: 1.5,
-        scrollTrigger: { trigger: blogBox.current, start: "top center", end: "bottom center" },
+        scrollTrigger: { trigger: blogBox.current, start: "top 90%" },
       }
     );
   }, []);

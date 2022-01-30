@@ -5,7 +5,7 @@ import { BlogId } from "src/pages/blog/[id]";
 
 const BlogIdPage: CustomNextPage = ({ blog }: any) => (
   <FluidLayout>
-    <BlogId blog={blog} />;
+    <BlogId blog={blog} />
   </FluidLayout>
 );
 

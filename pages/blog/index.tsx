@@ -15,7 +15,7 @@ const BlogPage: CustomNextPage = ({ blog }: any) => {
 
   return (
     <FluidLayout>
-      <Blog />;
+      <Blog />
     </FluidLayout>
   );
 };
