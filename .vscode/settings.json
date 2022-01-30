@@ -13,13 +13,16 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
     "automerge",
+    "Gacha",
     "gsap",
     "heroicons",
+    "ikiiki",
     "microcms",
     "mitochon",
     "Nextdotjs",
     "sendgrid",
     "Shinji",
+    "Supabase",
     "tailwindcss",
     "Takahashi"
   ]
