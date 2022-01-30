@@ -56,7 +56,7 @@ React を学習し始めて最初に作ったのもこのWebサイトです。
 （製作期間：1ヶ月）`,
   },
   {
-    href: "https://my-portfolio-dun-six.vercel.app/",
+    href: "https://takahashishinji.net/",
     label: "ポートフォリオサイト",
     buttonLabel: "ポートフォリオサイト",
     img: "/myPortfolio.png",
