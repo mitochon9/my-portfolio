@@ -9,7 +9,7 @@ import { TypeScriptAnimation } from "src/pages/index/animationHero/TypeScriptAni
 import { TypewriterAnimation } from "src/pages/index/animationHero/TypewriterAnimation";
 
 export const AnimationHero: VFC = () => (
-  <div className="pb-48 -mx-2 mt-[86px] bg-white border border-white xl:mx-0">
+  <div className="pb-48 -mx-2 bg-white border border-white lg:mt-[86px] xl:mx-0">
     <FirstView />
 
     <HtmlAnimation />

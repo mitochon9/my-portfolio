@@ -1,6 +1,7 @@
 import type { CustomLayout } from "next";
 import { useRouter } from "next/router";
 import type { ReactNode } from "react";
+import { DrawerMenu } from "src/layout/DrawerMenu";
 import { LayoutErrorBoundary } from "src/layout/LayoutErrorBoundary";
 
 import { Footer } from "./Footer";
@@ -26,6 +27,10 @@ export const FluidLayout: CustomLayout = ({ children }: Props) => {
           <LayoutErrorBoundary>{children}</LayoutErrorBoundary>
         </div>
       </main>
+
+      <div className="lg:hidden">
+        <DrawerMenu />
+      </div>
 
       <footer>
         <Footer />
