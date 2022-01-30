@@ -38,7 +38,6 @@ export const AnimationHero: VFC = () => {
         scrub: 0.5,
         pin: true,
         pinSpacing: false,
-        markers: true,
       },
     });
   }, [listWidth, listWrapperWidth]);
