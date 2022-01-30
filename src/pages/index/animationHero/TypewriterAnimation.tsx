@@ -7,13 +7,13 @@ export const TypewriterAnimation: VFC = () => {
   const typewriterBox: any = useRef(null);
 
   return (
-    <div className="flex relative flex-col justify-center items-center w-full h-screen text-5xl">
+    <div className="flex relative flex-col justify-center items-center mt-48 w-full min-h-screen text-5xl">
       <div ref={typewriterBox} className="mt-96">
         <Typewriter
           onInit={(typewriter) => {
             ScrollTrigger.create({
               trigger: typewriterBox.current,
-              start: "top 90%",
+              start: "bottom bottom",
               once: true,
               onEnter: () => typewriter.typeString("Cherish day by day!!").start(),
             });

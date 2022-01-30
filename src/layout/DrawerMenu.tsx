@@ -29,7 +29,7 @@ export const DrawerMenu = () => {
         type="button"
         aria-label="handle toggle drawer button"
         onClick={handleToggleDrawer}
-        className={`fixed right-0 top-0 z-50 w-12 h-12 rounded-full`}
+        className={`fixed right-0 top-0 z-50 w-12 h-12`}
       >
         {isDrawerOpen ? (
           <AiOutlineClose className="p-2 w-12 h-12 text-gray-50 bg-gray-600 border border-gray-600" />
@@ -93,6 +93,7 @@ export const DrawerMenu = () => {
                 <li
                   key={link.label}
                   className={`${link.label === "Contact" ? "col-span-2 bg-rose-400 m-2 rounded" : ""}`}
+                  onClick={handleCloseDrawer}
                 >
                   <Link href={link.href}>
                     <a className="flex gap-x-1 justify-center items-center py-4">
