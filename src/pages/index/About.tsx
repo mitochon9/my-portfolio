@@ -33,7 +33,7 @@ export const About: VFC = () => {
         y: 0,
         autoAlpha: 1,
         duration: 1.5,
-        scrollTrigger: { trigger: aboutBox.current, start: "top center" },
+        scrollTrigger: { trigger: aboutBox.current, start: "top 90%" },
       }
     );
   }, []);
@@ -45,15 +45,15 @@ export const About: VFC = () => {
       </h2>
       <h3 className="px-2 text-lg font-bold text-gray-700 md:text-xl">私について</h3>
 
-      <div className="flex flex-col gap-x-8 mx-2 mt-4 md:flex-row md:mx-8 md:mt-8">
-        <div className="flex flex-col justify-between">
-          <p className="text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet delectus ullam dignissimos dicta. Consequatur
-            nostrum magni numquam corrupti tempora dolores deserunt, aspernatur culpa sint non quod temporibus esse
-            distinctio at.
+      <div className="flex flex-col gap-x-8 mx-2 mt-4 md:flex-row md:justify-between md:mx-8 md:mt-8">
+        <div className="flex flex-col justify-between w-full">
+          <p className="text-lg prose">
+            大阪の鍼灸整骨院で柔道整復師として働いています。職場のHP作成をきっかけにWeb制作、プログラミングの学習をスタートしました。
+            <br />
+            次々と学習を進めていくごとに制作することの楽しさ、喜びを知り、誰かの役に立つ、利用してもらえるものを作りたいという気持ちが大きくなり、Web制作、開発を本業とするべく学習しています。
           </p>
 
-          <div className="flex flex-col justify-between items-end mt-4 md:flex-row md:mt-0">
+          <div className="flex flex-col justify-between items-end mt-4 md:flex-row md:flex-1 md:mt-0">
             <ul className="flex gap-x-4 justify-end text-2xl md:text-4xl">
               {icons.map((icon) => (
                 <li key={icon.label}>{icon.icon}</li>
@@ -71,8 +71,8 @@ export const About: VFC = () => {
           </div>
         </div>
 
-        <div className="mt-4 md:mt-0">
-          <Image src="/profile.jpeg" alt="profile" width={600} height={600} objectFit="cover" />
+        <div className="mt-4 w-auto md:mt-0">
+          <Image src="/profile.jpeg" alt="profile" width={400} height={400} objectFit="cover" />
         </div>
       </div>
     </div>
