@@ -44,6 +44,16 @@ React ではDOM の操作はNG ということでそのあたりの制御も意�
 （製作期間：2ヶ月〜）`,
   },
   {
+    href: "https://ikiiki-member-app.vercel.app/",
+    label: "店舗用会員アプリ（作成中）",
+    buttonLabel: "店舗用会員アプリ",
+    img: "/ikiikiMembersApp.png",
+    comment: `整骨院の回数券購入、残回数確認や月額会員の登録、解約ができるWebアプリを作成しました！
+クレジットカード決済はStripe を使用して実装しました。
+操作に迷わないようなUI設計やなるべくシンプルな構造になるよう意識して作成しました。
+（製作期間：1週間）`,
+  },
+  {
     href: "https://ik-fitness-labo.com/",
     label: "IK-Fitness",
     buttonLabel: "IK-Fitness",
