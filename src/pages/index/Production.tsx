@@ -8,8 +8,20 @@ import { LinkButton } from "src/component/Button";
 
 const productions = [
   {
-    href: "https://ikiiki-ss-ibaraki-ver-6.vercel.app/",
-    label: "いきいき鍼灸整骨院HP（SEO設定調整中）",
+    href: "https://poke-gacha-ver-2-0.vercel.app/",
+    label: "ポケガチャ",
+    buttonLabel: "ポケガチャ",
+    img: "/pokeGacha.png",
+    comment: `ポケモンのAPI（PokeAPI）からデータを取得して初期のポケモン（151匹）をランダムに表示するアプリを作成しました。
+    React のuseState を使用したboolean での画面の切り替え、制御をする部分や、ゲームボーイの見た目を表現するためのCSSに力を入れました！
+
+    また、ガチャで当たったポケモンのデータをlocalStorage に保存、削除する機能も実装し、ポケモン図鑑として見られるようにしました。
+    React ではDOM の操作はNG ということでそのあたりの制御も意識しながら作成しました。
+    （製作期間：4日）`,
+  },
+  {
+    href: "https://www.ikiiki-ss-ibaraki.com/",
+    label: "いきいき鍼灸整骨院HP",
     buttonLabel: "いきいき鍼灸整骨院HP",
     img: "/ikiikiHp.png",
     comment: `職場のホームページをReact(Next.js), TypeScript, TailwindCSS などを使用して作成しました。
@@ -18,40 +30,6 @@ InstagramのAPIで投稿を埋め込むことや、ヘッドレスCRM(microCMS)�
 最初は素のHTML, CSS で作成し、使用技術を変えながら作るごとにメンテナンスのしやすさなどを意識して作成しています。
 GoogleのPageSpeed Insights で高パフォーマンスを出すことにも成功しました！
 （製作期間：1週間（既存のコンポーネント使用））`,
-  },
-  {
-    href: "https://poke-gacha-ver-2-0.vercel.app/",
-    label: "ポケガチャ",
-    buttonLabel: "ポケガチャ",
-    img: "/pokeGacha.png",
-    comment: `ポケモンのAPI（PokeAPI）からデータを取得して初期のポケモン（151匹）をランダムに表示するアプリを作成しました。
-React のuseState を使用したboolean での画面の切り替え、制御をする部分や、ゲームボーイの見た目を表現するためのCSSに力を入れました！
-
-また、ガチャで当たったポケモンのデータをlocalStorage に保存、削除する機能も実装し、ポケモン図鑑として見られるようにしました。
-React ではDOM の操作はNG ということでそのあたりの制御も意識しながら作成しました。
-（製作期間：4日）`,
-  },
-  {
-    href: "https://mitochon9-crm-ver-2-0.vercel.app/",
-    label: "顧客管理システム（作成中）",
-    buttonLabel: "顧客管理システム",
-    img: "/mitochonCrm.png",
-    comment: `整骨院向けの顧客管理システム、電子カルテ化をすすめるためのアプリケーションを作成しています。
-フォームのバリデーション、認証機能やデータベースのCRUD操作、テーブルの結合やデータのフィルターなど様々な機能実装に苦戦しましたがたくさんの学びになりました。
-
-認証機能、データベースは比較的簡単に利用できるであろうSupabase を使用していますが、初めての実装で躓くことも多かったです。
-今後認証機能、データベースに関してバックエンドの基礎の部分から学習していきます。
-（製作期間：2ヶ月〜）`,
-  },
-  {
-    href: "https://ikiiki-member-app.vercel.app/",
-    label: "店舗用会員アプリ（作成中）",
-    buttonLabel: "店舗用会員アプリ",
-    img: "/ikiikiMembersApp.png",
-    comment: `整骨院の回数券購入、残回数確認や月額会員の登録、解約ができるWebアプリを作成しました！
-クレジットカード決済はStripe を使用して実装しました。
-操作に迷わないようなUI設計やなるべくシンプルな構造になるよう意識して作成しました。
-（製作期間：1週間）`,
   },
   {
     href: "https://ik-fitness-labo.com/",
@@ -63,7 +41,7 @@ React ではDOM の操作はNG ということでそのあたりの制御も意�
 3度目の制作はReact（Next.js） での制作です。
 React を学習し始めて最初に作ったのもこのWebサイトです。
 何もかも初めてでうまく作れないところから一つ一つ学んでいくきっかけになった想い出の多いサイトです。
-（製作期間：1ヶ月）`,
+（製作期間：5日）`,
   },
   {
     href: "https://takahashishinji.net/",
