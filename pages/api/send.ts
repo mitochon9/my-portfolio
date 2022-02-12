@@ -6,7 +6,7 @@ export default async function handler(req: any, res: any) {
   const { companyName, email, message, name } = req.body;
 
   const content = {
-    to: email,
+    to: [email, "mitochon9@gmail.com"],
     from: "mitochon9@gmail.com",
     subject: "お問合せありがとうございました。",
     text:
@@ -42,7 +42,7 @@ export default async function handler(req: any, res: any) {
 
         <div>
           <span>Website: </span>
-          <a href='#'>https://sample.com</a>
+          <a href='#'>https://takahashishinji.net/</a>
         </div>
         <p>------------------------------------------------</p>
       </div>
