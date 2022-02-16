@@ -19,30 +19,30 @@ const productions = [
     React ではDOM の操作はNG ということでそのあたりの制御も意識しながら作成しました。
     （製作期間：4日）`,
   },
-  {
-    href: "https://www.ikiiki-ss-ibaraki.com/",
-    label: "いきいき鍼灸整骨院HP",
-    buttonLabel: "いきいき鍼灸整骨院HP",
-    img: "/ikiikiHp.png",
-    comment: `職場のホームページをReact(Next.js), TypeScript, TailwindCSS などを使用して作成しました。
-InstagramのAPIで投稿を埋め込むことや、ヘッドレスCRM(microCMS)でのブログ作成にもチャレンジしてみました！
+  //   {
+  //     href: "https://www.ikiiki-ss-ibaraki.com/",
+  //     label: "いきいき鍼灸整骨院HP",
+  //     buttonLabel: "いきいき鍼灸整骨院HP",
+  //     img: "/ikiikiHp.png",
+  //     comment: `職場のホームページをReact(Next.js), TypeScript, TailwindCSS などを使用して作成しました。
+  // InstagramのAPIで投稿を埋め込むことや、ヘッドレスCRM(microCMS)でのブログ作成にもチャレンジしてみました！
 
-最初は素のHTML, CSS で作成し、使用技術を変えながら作るごとにメンテナンスのしやすさなどを意識して作成しています。
-GoogleのPageSpeed Insights で高パフォーマンスを出すことにも成功しました！
-（製作期間：1週間（既存のコンポーネント使用））`,
-  },
-  {
-    href: "https://ik-fitness-labo.com/",
-    label: "IK-Fitness",
-    buttonLabel: "IK-Fitness",
-    img: "/ikFitness.png",
-    comment: `Web制作、開発の学習を初めて最初に作ったサイトです！
-最初はHTML, CSS のみで作り、2度目はgulp の環境構築し、Sass を使って実装しました。
-3度目の制作はReact（Next.js） での制作です。
-React を学習し始めて最初に作ったのもこのWebサイトです。
-何もかも初めてでうまく作れないところから一つ一つ学んでいくきっかけになった想い出の多いサイトです。
-（製作期間：5日）`,
-  },
+  // 最初は素のHTML, CSS で作成し、使用技術を変えながら作るごとにメンテナンスのしやすさなどを意識して作成しています。
+  // GoogleのPageSpeed Insights で高パフォーマンスを出すことにも成功しました！
+  // （製作期間：1週間（既存のコンポーネント使用））`,
+  //   },
+  //   {
+  //     href: "https://ik-fitness-labo.com/",
+  //     label: "IK-Fitness",
+  //     buttonLabel: "IK-Fitness",
+  //     img: "/ikFitness.png",
+  //     comment: `Web制作、開発の学習を初めて最初に作ったサイトです！
+  // 最初はHTML, CSS のみで作り、2度目はgulp の環境構築し、Sass を使って実装しました。
+  // 3度目の制作はReact（Next.js） での制作です。
+  // React を学習し始めて最初に作ったのもこのWebサイトです。
+  // 何もかも初めてでうまく作れないところから一つ一つ学んでいくきっかけになった想い出の多いサイトです。
+  // （製作期間：5日）`,
+  //   },
   {
     href: "https://takahashishinji.net/",
     label: "ポートフォリオサイト",
